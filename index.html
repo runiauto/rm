@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>রেনু মেশিনারীজ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .bg-glow {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: rgba(59, 130, 246, 0.35);
+      border-radius: 50%;
+      filter: blur(100px);
+      top: -100px;
+      left: -100px;
+      animation: float 6s ease-in-out infinite alternate;
+    }
+
+    .bg-glow2 {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(168, 85, 247, 0.35);
+      border-radius: 50%;
+      filter: blur(100px);
+      bottom: -80px;
+      right: -80px;
+      animation: float 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(25px);
+      }
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      z-index: 10;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 30px;
+      padding: 30px 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .title {
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      font-weight: 700;
+      text-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .subtitle {
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .menu a {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #2563eb, #1d4ed8);
+      box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.45),
+        inset 0 2px 3px rgba(255,255,255,0.15),
+        inset 0 -2px 3px rgba(0,0,0,0.2);
+      transition: all 0.25s ease;
+      transform: translateZ(20px);
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-20deg);
+      transition: 0.5s;
+    }
+
+    .menu a:hover::before {
+      left: 120%;
+    }
+
+    .menu a:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.6),
+        inset 0 2px 3px rgba(255,255,255,0.2),
+        inset 0 -2px 3px rgba(0,0,0,0.2);
+    }
+
+    .menu a:active {
+      transform: scale(0.98);
+    }
+
+    .icon {
+      font-size: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      margin-top: 25px;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 1.6rem;
+      }
+
+      .menu a {
+        padding: 16px;
+        font-size: 0.95rem;
+      }
+
+      .card {
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+  <div class="bg-glow2"></div>
+
+  <div class="container">
+    <div class="card">
+      <h1 class="title">রেনু মেশিনারীজ</h1>
+      <p class="subtitle">Tap any button to open your website</p>
+
+      <div class="menu">
+        <a href="https://runiauto.blogspot.com/" target="_blank">
+          কাস্টোমার ছবি
+          <span class="icon">↗</span>
+        </a>
+
+        <a href="https://bakilist.blogspot.com/" target="_blank">
+          বাঁকি হিসাব
+          <span class="icon">▶</span>
+        </a>
+
+        <a href="https://rmlist.blogspot.com/" target="_blank">
+          মুল্য তালিকা
+          <span class="icon">f</span>
+        </a>
+
+        <a href="https://www.facebook.com/renumachineries" target="_blank">
+          আমাদের ফেসবুক
+          <span class="icon">f</span>
+        </a>
+
+        <a href="https://www.youtube.com/@renumachineries" target="_blank">
+          আমাদের Youtube
+          <span class="icon">▶</span>
+        </a>
+      </div>
+
+      <footer>
+        Made by Manik
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
